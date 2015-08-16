@@ -121,7 +121,7 @@ For example:
 ~~~ {.python}
 def some_function()
     msg = "hello, world!"
-    print msg
+    print(msg)
      return msg
 ~~~
 ~~~ {.error}
@@ -143,7 +143,7 @@ which means that the lines in the function definition do not all have the same i
 ~~~ {.python}
 def some_function():
     msg = "hello, world!"
-    print msg
+    print(msg)
      return msg
 ~~~
 ~~~ {.error}
@@ -173,7 +173,7 @@ it *always* means that there is a problem with how your code is indented.
 > ~~~ {.python}
 > def some_function():
 >     msg = "hello, world!"
->     print msg
+>     print(msg)
 >     return msg
 > ~~~
 > ~~~ {.error}
@@ -195,7 +195,7 @@ and occurs when you try to use a variable that does not exist.
 For example:
 
 ~~~ {.python}
-print a
+print(a)
 ~~~
 ~~~ {.error}
 ---------------------------------------------------------------------------
@@ -217,13 +217,13 @@ there are a few very common reasons why you might have an undefined variable.
 The first is that you meant to use a [string](reference.html#string), but forgot to put quotes around it:
 
 ~~~ {.python}
-print hello
+print(hello)
 ~~~
 ~~~ {.error}
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
 <ipython-input-8-9553ee03b645> in <module>()
-----> 1 print hello
+----> 1 print(hello)
 
 NameError: name 'hello' is not defined
 ~~~
@@ -235,7 +235,7 @@ In the following example,
 ~~~ {.python}
 for number in range(10):
     count = count + number
-print "The count is: " + str(count)
+print("The count is: " + str(count))
 ~~~
 ~~~ {.error}
 ---------------------------------------------------------------------------
@@ -243,7 +243,7 @@ NameError                                 Traceback (most recent call last)
 <ipython-input-9-dd6a12d7ca5c> in <module>()
       1 for number in range(10):
 ----> 2     count = count + number
-      3 print "The count is: " + str(count)
+      3 print("The count is: " + str(count))
 
 NameError: name 'count' is not defined
 ~~~
@@ -258,7 +258,7 @@ so the variable `count` is different from `Count`. We still get the same error, 
 Count = 0
 for number in range(10):
     count = count + number
-print "The count is: " + str(count)
+print("The count is: " + str(count))
 ~~~
 ~~~ {.error}
 ---------------------------------------------------------------------------
@@ -267,7 +267,7 @@ NameError                                 Traceback (most recent call last)
       1 Count = 0
       2 for number in range(10):
 ----> 3     count = count + number
-      4 print "The count is: " + str(count)
+      4 print("The count is: " + str(count))
 
 NameError: name 'count' is not defined
 ~~~
@@ -285,10 +285,10 @@ Python gets similarly annoyed if you try to ask it for an item that doesn't exis
 
 ~~~ {.python}
 letters = ['a', 'b', 'c']
-print "Letter #1 is " + letters[0]
-print "Letter #2 is " + letters[1]
-print "Letter #3 is " + letters[2]
-print "Letter #4 is " + letters[3]
+print("Letter #1 is " + letters[0])
+print("Letter #2 is " + letters[1])
+print("Letter #3 is " + letters[2])
+print("Letter #4 is " + letters[3])
 ~~~
 ~~~ {.output}
 Letter #1 is a
@@ -299,9 +299,9 @@ Letter #3 is c
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
 <ipython-input-11-d817f55b7d6c> in <module>()
-      3 print "Letter #2 is " + letters[1]
-      4 print "Letter #3 is " + letters[2]
-----> 5 print "Letter #4 is " + letters[3]
+      3 print("Letter #2 is " + letters[1])
+      4 print("Letter #3 is " + letters[2])
+----> 5 print("Letter #4 is " + letters[3])
 
 IndexError: list index out of range
 ~~~
@@ -358,7 +358,7 @@ file_handle.read()
 IOError                                   Traceback (most recent call last)
 <ipython-input-15-b846479bc61f> in <module>()
       1 file_handle = open('myfile.txt', 'w')
-----> 2 file_handle.read()
+----> 2 file_h0andle.read()
 
 IOError: File not open for reading
 ~~~
@@ -409,9 +409,9 @@ IOError: File not open for reading
 >
 > ~~~ {.python}
 > def another_function
->   print "Syntax errors are annoying."
->    print "But at least python tells us about them!"
->   print "So they are usually not too hard to fix."
+>   print("Syntax errors are annoying.")
+>    print("But at least python tells us about them!")
+>   print("So they are usually not too hard to fix.")
 > ~~~
 
 > ## Identifying Variable Name Errors {.challenge}
@@ -428,7 +428,7 @@ IOError: File not open for reading
 >         message = message + a
 >     else:
 >         message = message + "b"
-> print message
+> print(message)
 > ~~~
 
 > ## Identifying Item Errors {.challenge}
@@ -439,5 +439,5 @@ IOError: File not open for reading
 >
 > ~~~ {.python}
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
-> print 'My favorite season is ', seasons[4]
+> print('My favorite season is ', seasons[4])
 > ~~~

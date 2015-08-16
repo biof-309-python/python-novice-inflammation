@@ -62,7 +62,7 @@ total = 0.0
 for n in numbers:
     assert n > 0.0, 'Data should only contain positive values'
     total += n
-print 'total is:', total
+print('total is:', total)
 ~~~
 ~~~ {.error}
 ---------------------------------------------------------------------------
@@ -72,7 +72,7 @@ AssertionError                            Traceback (most recent call last)
       3 for n in numbers:
 ----> 4     assert n > 0.0, 'Data should only contain positive values'
       5     total += n
-      6 print 'total is:', total
+      6 print('total is:', total)
 
 AssertionError: Data should only contain positive values
 ~~~
@@ -166,7 +166,7 @@ For example,
 if we normalize a rectangle that is taller than it is wide everything seems OK:
 
 ~~~ {.python}
-print normalize_rectangle( (0.0, 0.0, 1.0, 5.0) )
+print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0) ))
 ~~~
 ~~~ {.output}
 (0, 0, 0.2, 1.0)
@@ -176,7 +176,7 @@ but if we normalize one that's wider than it is tall,
 the assertion is triggered:
 
 ~~~ {.python}
-print normalize_rectangle( (0.0, 0.0, 5.0, 1.0) )
+print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0) ))
 ~~~
 ~~~ {.error}
 ---------------------------------------------------------------------------
