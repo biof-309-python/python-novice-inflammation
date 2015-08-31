@@ -38,17 +38,15 @@ errors_01.favorite_ice_cream()
 ~~~ {.error}
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
-<ipython-input-1-9d0462a5b07c> in <module>()
-      1 import errors_01
-----> 2 errors_01.favorite_ice_cream()
+<ipython-input-5-44b1b870e6a6> in <module>()
+----> 1 errors_01.favorite_ice_cream()
 
-/Users/jhamrick/project/swc/novice/python/errors_01.pyc in favorite_ice_cream()
+/home/jonathan/Documents/dev/teaching/Introduction_to_Python_Fall2015/python-novice-inflammation/code/errors_01.py in favorite_ice_cream()
       5         "strawberry"
       6     ]
-----> 7     print ice_creams[3]
+----> 7     print(ice_creams[3])
 
-IndexError: list index out of range
-~~~
+IndexError: list index out of range~~~
 
 This particular traceback has two levels.
 You can determine the number of levels by looking for the number of arrows on the left hand side.
@@ -201,7 +199,7 @@ print(a)
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
 <ipython-input-7-9d7b17ad5387> in <module>()
-----> 1 print a
+----> 1 print(a)
 
 NameError: name 'a' is not defined
 ~~~
@@ -339,7 +337,7 @@ and I have a file in `myproject/writing/myfile.txt`,
 but I try to just open `myfile.txt`,
 this will fail.
 The correct path would be `writing/myfile.
-xt`. It is also possible (like with `NameError`) that you just made a typo.
+txt`. It is also possible (like with `NameError`) that you just made a typo.
 
 Another issue could be that you used the "read" flag instead of the "write" flag.
 Python will not give you an error if you try to open a file for writing when the file does not exist.
@@ -393,7 +391,7 @@ IOError: File not open for reading
 > /Users/jhamrick/project/swc/novice/python/errors_02.py in print_message(day)
 >       9         "sunday": "Aw, the weekend is almost over."
 >      10     }
-> ---> 11     print messages[day]
+> ---> 11     print(messages[day])
 >      12
 >      13
 >
