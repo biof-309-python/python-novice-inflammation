@@ -67,10 +67,10 @@ n
 ~~~ {.error}
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
-<ipython-input-3-7974b6cdaf14> in <module>()
-      3 print word[1]
-      4 print word[2]
-----> 5 print word[3]
+<ipython-input-1-a51226538da7> in <module>()
+      3 print(word[1])
+      4 print(word[2])
+----> 5 print(word[3])
 
 IndexError: string index out of range
 ~~~
@@ -192,7 +192,7 @@ so we should always use it when we can.
 
 > ## From 1 to N {.challenge}
 >
-> Python has a built-in function called `range` that creates a list of numbers. Range can
+> Python has a built-in function called `range` that creates a sequence of numbers. Range can
 > accept 1-3 parameters. If one parameter is input, range creates an array of that length,
 > starting at zero and incrementing by 1. If 2 parameters are input, range starts at
 > the first and ends at the second, incrementing by one. If range is passed 3 parameters,
