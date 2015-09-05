@@ -68,10 +68,10 @@ i
 n</code></pre>
 <pre class="error"><code>---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
-&lt;ipython-input-3-7974b6cdaf14&gt; in &lt;module&gt;()
-      3 print word[1]
-      4 print word[2]
-----&gt; 5 print word[3]
+&lt;ipython-input-1-a51226538da7&gt; in &lt;module&gt;()
+      3 print(word[1])
+      4 print(word[2])
+----&gt; 5 print(word[3])
 
 IndexError: string index out of range</code></pre>
 <p>Here’s a better approach:</p>
@@ -121,7 +121,7 @@ after the loop, letter is c</code></pre>
 <h2><span class="glyphicon glyphicon-pencil"></span>From 1 to N</h2>
 </div>
 <div class="panel-body">
-<p>Python has a built-in function called <code>range</code> that creates a list of numbers. Range can accept 1-3 parameters. If one parameter is input, range creates an array of that length, starting at zero and incrementing by 1. If 2 parameters are input, range starts at the first and ends at the second, incrementing by one. If range is passed 3 parameters, it stars at the first one, ends at the second one, and increments by the third one. For example: <code>range(3)</code> produces <code>[0, 1, 2]</code>, <code>range(2, 5)</code> produces <code>[2, 3, 4]</code>. Using <code>range</code>, write a loop that uses <code>range</code> to print the first 3 natural numbers:</p>
+<p>Python has a built-in function called <code>range</code> that creates a sequence of numbers. Range can accept 1-3 parameters. If one parameter is input, range creates an array of that length, starting at zero and incrementing by 1. If 2 parameters are input, range starts at the first and ends at the second, incrementing by one. If range is passed 3 parameters, it stars at the first one, ends at the second one, and increments by the third one. For example: <code>range(3)</code> produces <code>[0, 1, 2]</code>, <code>range(2, 5)</code> produces <code>[2, 3, 4]</code>. Using <code>range</code>, write a loop that uses <code>range</code> to print the first 3 natural numbers:</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="dv">1</span>
 <span class="dv">2</span>
 <span class="dv">3</span></code></pre>

@@ -54,18 +54,10 @@
 <p>Errors in Python have a very specific form, called a <a href="reference.html#traceback">traceback</a>. Let’s examine one:</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> errors_01
 errors_01.favorite_ice_cream()</code></pre>
-<pre class="error"><code>---------------------------------------------------------------------------
-IndexError                                Traceback (most recent call last)
-&lt;ipython-input-1-9d0462a5b07c&gt; in &lt;module&gt;()
-      1 import errors_01
-----&gt; 2 errors_01.favorite_ice_cream()
-
-/Users/jhamrick/project/swc/novice/python/errors_01.pyc in favorite_ice_cream()
-      5         &quot;strawberry&quot;
-      6     ]
-----&gt; 7     print ice_creams[3]
-
-IndexError: list index out of range</code></pre>
+<h2 id="section" class="error"><sub>~</sub></h2>
+<p>IndexError Traceback (most recent call last) <ipython-input-5-44b1b870e6a6> in <module>() —-&gt; 1 errors_01.favorite_ice_cream()</p>
+<p>/home/jonathan/Documents/dev/teaching/Introduction_to_Python_Fall2015/python-novice-inflammation/code/errors_01.py in favorite_ice_cream() 5 “strawberry” 6 ] —-&gt; 7 print(ice_creams[3])</p>
+<p>IndexError: list index out of range<sub>~</sub></p>
 <p>This particular traceback has two levels. You can determine the number of levels by looking for the number of arrows on the left hand side. In this case:</p>
 <ol style="list-style-type: decimal">
 <li><p>The first shows code from the cell above, with an arrow pointing to Line 2 (which is <code>favorite_ice_cream()</code>).</p></li>
@@ -131,7 +123,7 @@ IndentationError: unindent does not match any outer indentation level</code></pr
 <pre class="error"><code>---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
 &lt;ipython-input-7-9d7b17ad5387&gt; in &lt;module&gt;()
-----&gt; 1 print a
+----&gt; 1 print(a)
 
 NameError: name &#39;a&#39; is not defined</code></pre>
 <p>Variable name errors come with some of the most informative error messages, which are usually of the form “name ‘the_variable_name’ is not defined”.</p>
@@ -197,7 +189,7 @@ IOError                                   Traceback (most recent call last)
 ----&gt; 1 file_handle = open(&#39;myfile.txt&#39;, &#39;r&#39;)
 
 IOError: [Errno 2] No such file or directory: &#39;myfile.txt&#39;</code></pre>
-<p>One reason for receiving this error is that you specified an incorrect path to the file. For example, if I am currently in a folder called <code>myproject</code>, and I have a file in <code>myproject/writing/myfile.txt</code>, but I try to just open <code>myfile.txt</code>, this will fail. The correct path would be <code>writing/myfile. xt</code>. It is also possible (like with <code>NameError</code>) that you just made a typo.</p>
+<p>One reason for receiving this error is that you specified an incorrect path to the file. For example, if I am currently in a folder called <code>myproject</code>, and I have a file in <code>myproject/writing/myfile.txt</code>, but I try to just open <code>myfile.txt</code>, this will fail. The correct path would be <code>writing/myfile. txt</code>. It is also possible (like with <code>NameError</code>) that you just made a typo.</p>
 <p>Another issue could be that you used the “read” flag instead of the “write” flag. Python will not give you an error if you try to open a file for writing when the file does not exist. However, if you meant to open a file for reading, but accidentally opened it for writing, and then try to read from it, you will get an error telling you that the file was not opened for reading:</p>
 <pre class="sourceCode python"><code class="sourceCode python">file_handle = <span class="dt">open</span>(<span class="st">&#39;myfile.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)
 file_handle.read()</code></pre>
@@ -238,7 +230,7 @@ KeyError                                  Traceback (most recent call last)
 /Users/jhamrick/project/swc/novice/python/errors_02.py in print_message(day)
       9         &quot;sunday&quot;: &quot;Aw, the weekend is almost over.&quot;
      10     }
----&gt; 11     print messages[day]
+---&gt; 11     print(messages[day])
      12
      13
 
